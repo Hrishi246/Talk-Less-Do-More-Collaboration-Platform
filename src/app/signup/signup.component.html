@@ -7,7 +7,7 @@
   <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
   <div class="InputContent">
     <mat-card-content>
-      <form class="example-form">
+      <form class="example-form" name="form" (ngSubmit)= "f.form.valid && onSubmit()" #f="ngForm" novalidate>
 
         <mat-form-field class="example-full-width">
           <input [ngModelOptions]="{standalone: true}" matInput placeholder="FirstName" [(ngModel)]="signUpModel.FirstName">
@@ -16,10 +16,20 @@
           <input [ngModelOptions]="{standalone: true}" matInput placeholder="LastName" [(ngModel)]="signUpModel.LastName">
         </mat-form-field>
         <mat-form-field class="example-full-width">
-          <input [ngModelOptions]="{standalone: true}" matInput placeholder="Username" [(ngModel)]="signUpModel.Username">
+          <input [ngModelOptions]= "{standalone: true}" matInput placeholder="Username" [(ngModel)]="signUpModel.Username"  #Username="ngModel"
+          [ngClass]="{'is-invalid' : f.submitted && Username.invalid}" required Username />
+          <div class="invalid-feedback">
+            <div *ngIf ="Username.errors.required">UserName is required</div>
+            <div *ngIf ="Username.errors.Username">UserName must be valid</div>
+          </div>
         </mat-form-field>
         <mat-form-field class="example-full-width">
-          <input [ngModelOptions]="{standalone: true}" matInput placeholder="Password" [(ngModel)]="signUpModel.Password">
+          <input [ngModelOptions]= "{standalone: true}" matInput placeholder="Password" [(ngModel)]="signUpModel.Password" #Password ="ngModel"
+          [ngClass]="{'is-invalid' : f.submitted && Password.invalid}" required minlength="6" />
+          <div class="invalid-feedback">
+            <div *ngIf ="Password.errors.required">Password is required</div>
+            <div *ngIf ="Password.errors.minlength">Password must at least have six characters</div>
+          </div>
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <input [ngModelOptions]="{standalone: true}" matInput placeholder="Designation" [(ngModel)]="signUpModel.Designation">
@@ -28,9 +38,10 @@
           <input [ngModelOptions]="{standalone: true}" matInput placeholder="WorkspaceName" [(ngModel)]="signUpModel.WorkspaceName">
         </mat-form-field>
       </form>
+      <mat-card-actions class="buttonCss">
+        <button mat-raised-button color="primary" (click) = "CallToDatabase()">SignUp</button>
+      </mat-card-actions>
     </mat-card-content>
-    <mat-card-actions class="buttonCss">
-      <button mat-raised-button color="primary" (click)="CallToDatabase()">SignUp</button>
-    </mat-card-actions>
+
   </div>
 </mat-card>

@@ -18,7 +18,13 @@ export class SignupComponent implements OnInit {
 
   CallToDatabase(){
     console.log(this.signUpModel);
-     this._signupservice.PostDataBySignUp(this.signUpModel).subscribe(data => console.log('success'), err => console.log(err))
+     this._signupservice.PostDataBySignUp(this.signUpModel).subscribe(data => console.log('success'), err => console.log(err));
+
 
   }
+
+  onSubmit() {
+    alert(JSON.stringify(this.signUpModel))
+  }
+
 }
