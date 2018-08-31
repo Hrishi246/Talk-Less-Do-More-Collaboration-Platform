@@ -1,12 +1,32 @@
-.example-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
+.example-card{
+  width: 500px;
+  height: 500px;
   margin-left: 400px;
-  margin-top: 50px;
+  margin-top: 20px
 
-}
+ }
+ .InputContent{
 
-.example-full-width {
-  width: 100%;
-}
+  padding-top: 0px;
+  align-content: center;
+  width: 500px;
+  height: 500px;
+
+
+ }
+
+ .example-form{
+  margin-top: 20px;
+
+
+ }
+ .example-full-width{
+   width: 475px;
+   /* text-align: center; */
+   align-content: center;
+ }
+
+ .buttonCss{
+   align-items: center;
+   padding-left: 13px;
+ }

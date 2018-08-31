@@ -1,0 +1,26 @@
+
+.login{
+  float: right;
+
+  margin-left: 1000px;
+}
+
+.join{
+  float: right;
+
+  margin-left: 1000px;
+
+}
+.example-fill-remaining-space{
+  width: 100px;
+}
+.getWorkspace{
+  width: 400px;
+  margin-top: 250px;
+  margin-left: 450px;
+}
+
+/* .bg{
+background-image: url("wp2067919.jpg")
+
+} */

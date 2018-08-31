@@ -8,6 +8,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import{AppRoutingModule, routingComponents} from './app-routing.module';
+import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
+import {ErrorStateMatcher} from '@angular/material/core';
 import { GetStartComponent } from './get-start/get-start.component';
 import { VerifyComponent } from './verify/verify.component';
 import { LoginComponent } from './login/login.component';

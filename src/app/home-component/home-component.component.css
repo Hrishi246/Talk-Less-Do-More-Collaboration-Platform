@@ -31,6 +31,21 @@
 
 } */
 .login{
-
   float: right;
+
+  margin-left: 1000px;
 }
+
+.example-fill-remaining-space{
+  width: 100px;
+}
+.getStarted{
+  width: 400px;
+  margin-top: 250px;
+  margin-left: 450px;
+}
+
+/* .add-background-image {
+  background-image: url('wp2067919.jpg');
+  height: 100%;
+} */
