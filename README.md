@@ -1,6 +1,5 @@
 # Project
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.3.
+Tldm i.e. Talk less do more is a full-fledged collaboration platform that can be used by closely-interdependent agile teams for communication. This is the front end module of the project developed using Angular 6.
 
 ## Development server
 
